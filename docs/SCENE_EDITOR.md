@@ -1,6 +1,6 @@
 # Marble Studio scene editor
 
-The app imports World Labs splats or meshes, segments scene objects, and moves, rotates, scales, or deletes them. The editor is the default `/` route. It runs independently of Convex, Isaac Sim, and training. The current delivery also includes a two-minute demo video, opening with 16 tiled clips of real edits on varied objects, followed by the method, challenges, and actual roles of the event technologies. The older robotics/video work in [DEMO_VIDEO_HANDOFF.md](DEMO_VIDEO_HANDOFF.md) is historical context.
+The app imports World Labs splats or meshes, segments scene objects, and moves, rotates, scales, or deletes them. See the [README](../README.md) for the two-minute demo, technology roles, and quickstart.
 
 ## Run
 
@@ -22,18 +22,6 @@ npm run segmentation:serve
 ```
 
 Install a CUDA-compatible Torch build for GPU inference. The service loads a pinned SAM2 model on startup; the first run downloads its weights. It binds to `127.0.0.1:8008`, and Vite proxies `/api/segmentation` to it. Screenshots are processed locally. API keys are read only by Python, never included in browser code or project files. No new World Labs worlds are generated.
-
-On Odin, the existing environment and model cache are usable:
-
-```bash
-HF_HOME=/dev/shm/spatialhack-isaac6-jrX9PL/hf \
-TMPDIR=/dev/shm/spatialhack-isaac6-jrX9PL/tmp \
-/dev/shm/spatialhack-isaac6-jrX9PL/venv/bin/python scripts/segmentation_server.py
-```
-
-Source `~/.bashrc` in the launching shell to inherit the user's World Labs keys. The `/dev/shm` environment is volatile across reboots; the repository and requirements are durable.
-
-The running worktree is `/home/npow/code/spatialhack-odin-convex-0905`. Its tailnet URL is `https://odin.tail17f7a4.ts.net:8443/`, forwarding to port 5173. The existing root service on port 443 is unchanged. Disable this additional proxy with `tailscale serve --https=8443 off`.
 
 ## Workflow
 
@@ -74,11 +62,11 @@ npm run test:editor -- --ai  # also requires the local SAM2 service
 
 The browser test uses Playwright and an installed Chrome (`CHROME_PATH` can override its path); `EDITOR_URL` can override the app URL. It exercises selection, Add/Subtract, move/rotate/scale, delete, undo/redo, project roundtrip, local autosave recovery, floor repair and its toggle, mesh extraction, GLB export counts with repair disabled, and recovery when AI is unavailable. Screenshots and downloaded files go to ignored `artifacts/scene-editor/`.
 
-Verified on Odin on 2026-09-06 UTC:
+Standalone extraction verified on 2026-09-06 UTC:
 
 - Production TypeScript/Vite build passed. Vite reports the existing large Spark/Three bundle warning.
 - Twelve geometry/project/floor tests and four API validation tests passed.
-- Real SAM2 browser workflow passed with 17,090 source splats after refinement; the screenshot before Add/Subtract contains 16,956.
+- Real SAM2 browser workflow passed with 17,078 source splats after refinement; the screenshot before Add/Subtract contains 16,956.
 - Mesh workflow deleted 1,656 faces; with floor repair disabled, the exported GLB contained exactly 31,378 remaining triangles from the 33,034-face source.
 - Project reopening and browser reload reproduced the saved object records exactly. Floor repair, its saved setting and undo history, transforms, and unavailable-AI recovery passed; no uncaught browser errors occurred.
 - Visual inspection confirmed the sofa highlight and the repaired/unrepaired comparison. The repaired result still has visible texture repetition and residual edges; the test verifies operation and persistence, not photorealistic completion.
@@ -94,4 +82,3 @@ The earlier 2026-09-05 run also verified authenticated Marble link import and re
 - `scripts/segmentation_server.py`: pinned SAM2 inference and World Labs world lookup.
 - `tests/`, `scripts/test_scene_editor.mjs`: core/API/browser checks.
 
-The previous studio remains available at `/?studio=1`, and the historical segmentation wall at `/?segments=1`. Its old House 2 “sofa” label is a model error: the source image shows kitchen cabinetry. The new editor does not use those frozen semantic labels or claim their quality audit as segmentation accuracy.

@@ -1,6 +1,10 @@
 # Reproduce the Marble Studio demo
 
-The deliverable is a **120-second, 1920 × 1080, 25 fps H.264 video with visible explanatory captions and no audio**. The optional script in [narration.md](narration.md) has not been recorded.
+The deliverable is a **120-second, 1920 × 1080, 25 fps H.264 video**, available with captions only or with generic synthetic narration.
+
+- [Narrated video](../../public/demo/marble-studio-2min-narrated.mp4)
+- [Animated README preview](../../public/demo/scene-editor-preview.gif)
+- [Recorded narration script](spoken-script.json)
 
 - [Video](../../public/demo/marble-studio-2min.mp4) — served at `/demo/marble-studio-2min.mp4`.
 - [Poster](../../public/demo/marble-studio-2min.jpg) — served at `/demo/marble-studio-2min.jpg`.
@@ -21,7 +25,7 @@ python3 -m venv .venv
 .venv/bin/python -m pip install -r requirements-segmentation.txt
 ```
 
-The recorder uses `/usr/bin/google-chrome`; `CHROME_PATH` can point to another compatible executable. Playwright's FFmpeg supports browser recording, while system `ffmpeg` and `ffprobe` perform assembly and validation. Pillow comes from the segmentation requirements. Install a CUDA-compatible Torch build for GPU inference; the demonstrated run used an NVIDIA RTX 6000 GPU. See [scene editor setup](../SCENE_EDITOR.md) for the existing Odin environment and model cache.
+The recorder uses `/usr/bin/google-chrome`; `CHROME_PATH` can point to another compatible executable. Playwright's FFmpeg supports browser recording, while system `ffmpeg` and `ffprobe` perform assembly and validation. Pillow comes from the segmentation requirements. Install a CUDA-compatible Torch build for GPU inference; the demonstrated run used an NVIDIA RTX 6000 GPU. See [scene editor setup](../SCENE_EDITOR.md) for service setup.
 
 ## Run the app and mask service
 
@@ -49,7 +53,7 @@ node scripts/render_scene_slides.mjs
 .venv/bin/python scripts/assemble_scene_video.py
 ```
 
-The capture script reads [shots.json](shots.json), performs the selections and transformations, and writes videos, screenshots, project snapshots, source hashes, errors, and timing marks to `artifacts/scene-editor/video/`. It needs a working WebGL2 browser; its Vulkan flags match the Odin recording environment. Rerun one capture with, for example:
+The capture script reads [shots.json](shots.json), performs the selections and transformations, and writes videos, screenshots, project snapshots, source hashes, errors, and timing marks to `artifacts/scene-editor/video/`. It needs a working WebGL2 browser; its Vulkan flags match the Linux GPU recording environment. Rerun one capture with, for example:
 
 ```bash
 SHOTS=seattle-sofa EDITOR_URL=http://127.0.0.1:5173 node scripts/record_scene_editor.mjs
@@ -82,6 +86,21 @@ The renderer updates the track in memory for that render; it does not rewrite th
 
 The browser captures show the real editor. Selection uses actual pointer interactions; deterministic transform playback changes the real scene node and dispatches the same TransformControls events used by a drag. This is scripted application footage. The assembler trims, retimes, crops, labels, and arranges those recorded pixels; it does not synthesize a successful edit. Capture manifests include source asset hashes, selected splat counts, timing marks, and browser errors.
 
-World Labs Marble supplies the world assets and API import; Meta SAM 2 produces local screen masks; Spark and Three.js render splats and provide transform gizmos; an NVIDIA RTX 6000 GPU runs SAM 2. Floor repair is an approximate flat reconstruction using nearby rendered floor. Tiling, residual geometry, and unseen object backs remain visible limitations. Convex and Isaac are historical work and are not credited as dependencies of this editor.
+World Labs Marble supplies the world assets and API import; Meta SAM 2 produces local screen masks; Spark and Three.js render splats and provide transform gizmos; an NVIDIA RTX 6000 GPU runs SAM 2. Floor repair is an approximate flat reconstruction using nearby rendered floor. Tiling, residual geometry, and unseen object backs remain visible limitations. 
 
 The durable inputs are the scripts under `scripts/` and this directory's shot list, JSON copy, HTML, and narration. Generated captures, project snapshots, slide PNGs, and FFmpeg intermediates stay under the ignored `artifacts/scene-editor/` directory. Public MP4, poster, and report live under `public/demo/` so they can ship with the app. No secrets belong in any capture manifest or public output.
+
+## Optional local narration
+
+Use a separate Python 3.10–3.12 environment so voice dependencies do not affect the segmentation service:
+
+```bash
+python3.12 -m venv .venv-narration
+.venv-narration/bin/pip install kokoro==0.9.4 'misaki[en]==0.9.4' soundfile==0.14.0
+.venv-narration/bin/python scripts/generate_scene_narration.py
+.venv/bin/python scripts/assemble_scene_video.py \
+  --audio artifacts/scene-editor/video/narration.wav \
+  --output public/demo/marble-studio-2min-narrated.mp4
+```
+
+The generator downloads pinned Kokoro weights and uses the generic `af_heart` voice. It needs FFmpeg and does not use an API key. The spoken script and section timing are in `spoken-script.json`.
