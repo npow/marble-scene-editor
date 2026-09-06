@@ -1,0 +1,43 @@
+{
+  "world_id": "418cea0d-6cbb-4a23-b5d8-83e79a1c21c8",
+  "display_name": "house_2_lancaster",
+  "tags": null,
+  "assets": {
+    "mesh": {
+      "collider_mesh_url": "https://cdn.marble.worldlabs.ai/418cea0d-6cbb-4a23-b5d8-83e79a1c21c8/c6fd25ce.glb",
+      "hq_mesh_url": null,
+      "full_res_mesh_url": null
+    },
+    "imagery": {
+      "pano_url": "https://cdn.marble.worldlabs.ai/418cea0d-6cbb-4a23-b5d8-83e79a1c21c8/728ab2f8-5327-4fd2-a8bf-91c6dc72a889_panos/rgb_0.png"
+    },
+    "splats": {
+      "spz_urls": {
+        "500k": "https://cdn.marble.worldlabs.ai/418cea0d-6cbb-4a23-b5d8-83e79a1c21c8/026537b2-138f-44eb-954c-b99489d7c671_ceramic_500k.spz",
+        "100k": "https://cdn.marble.worldlabs.ai/418cea0d-6cbb-4a23-b5d8-83e79a1c21c8/2484b3e7-5886-4709-81cd-83e9f0901e6d_dust_100k.spz",
+        "150k": "https://cdn.marble.worldlabs.ai/418cea0d-6cbb-4a23-b5d8-83e79a1c21c8/c2265255-5136-4f6b-ad8d-fb9ff6cca972_ceramic_150k.spz",
+        "full_res": "https://cdn.marble.worldlabs.ai/418cea0d-6cbb-4a23-b5d8-83e79a1c21c8/5b88232e-929f-4a7b-88ed-d3b6bade36c1_ceramic.spz"
+      },
+      "semantics_metadata": {
+        "metric_scale_factor": 2.1545767784118652,
+        "ground_plane_offset": 1.416982650756836
+      }
+    },
+    "thumbnail_url": "https://cdn.marble.worldlabs.ai/418cea0d-6cbb-4a23-b5d8-83e79a1c21c8/1bf942b2-55ff-4e88-882d-ef7bb6ab8a90_sand_mpi/thumbnail.webp",
+    "caption": "The scene is a modern single-family residence living room, rendered in a photorealistic style, exuding a clean and sophisticated ambiance. The overall tone is bright and inviting, emphasizing contemporary design and spaciousness. Wide plank oak floors stretch across the entire living area, providing a warm and natural foundation for the space. Contemporary architectural lighting, including recessed fixtures and subtle strip lighting, illuminates the room, highlighting its clean lines and modern aesthetic. Large sliding glass patio doors dominate one wall, offering expansive views of the outdoors and allowing abundant natural light to flood the interior. The living room seamlessly transitions into an open-concept kitchen layout, where sleek cabinetry and high-end appliances are visible, maintaining a cohesive design flow. A minimalist fireplace is integrated into a feature wall, serving as a focal point without overwhelming the space. Comfortable, low-profile furniture pieces are strategically arranged, inviting relaxation and conversation. The walls are painted in a neutral palette, enhancing the sense of openness and allowing the architectural elements and natural light to take center stage. The wide plank oak floors extend from the living room directly into the open-concept kitchen area, creating a continuous surface. The sliding glass patio doors are positioned along the main exterior wall, opposite the integrated fireplace. The contemporary architectural lighting is recessed into the ceiling and along wall edges, providing ambient and task illumination throughout the combined living and kitchen spaces. "
+  },
+  "created_at": "2026-09-05T19:57:49Z",
+  "updated_at": "2026-09-05T20:18:08Z",
+  "permission": {
+    "public": false,
+    "allowed_readers": [],
+    "allowed_writers": [],
+    "allow_id_access": false
+  },
+  "world_prompt": {
+    "text_prompt": "The scene is a modern single-family residence living room, rendered in a photorealistic style, exuding a clean and sophisticated ambiance. The overall tone is bright and inviting, emphasizing contemporary design and spaciousness. Wide plank oak floors stretch across the entire living area, providing a warm and natural foundation for the space. Contemporary architectural lighting, including recessed fixtures and subtle strip lighting, illuminates the room, highlighting its clean lines and modern aesthetic. Large sliding glass patio doors dominate one wall, offering expansive views of the outdoors and allowing abundant natural light to flood the interior. The living room seamlessly transitions into an open-concept kitchen layout, where sleek cabinetry and high-end appliances are visible, maintaining a cohesive design flow. A minimalist fireplace is integrated into a feature wall, serving as a focal point without overwhelming the space. Comfortable, low-profile furniture pieces are strategically arranged, inviting relaxation and conversation. The walls are painted in a neutral palette, enhancing the sense of openness and allowing the architectural elements and natural light to take center stage. The wide plank oak floors extend from the living room directly into the open-concept kitchen area, creating a continuous surface. The sliding glass patio doors are positioned along the main exterior wall, opposite the integrated fireplace. The contemporary architectural lighting is recessed into the ceiling and along wall edges, providing ambient and task illumination throughout the combined living and kitchen spaces. The 360 scene is faultless.",
+    "type": "text"
+  },
+  "world_marble_url": "https://marble.worldlabs.ai/world/418cea0d-6cbb-4a23-b5d8-83e79a1c21c8",
+  "model": "marble-1.1"
+}

@@ -1,0 +1,43 @@
+{
+  "world_id": "b9343ffa-0b73-433b-98db-b4c448d93224",
+  "display_name": "Seattle_Lake_Union_Water_View",
+  "tags": null,
+  "assets": {
+    "mesh": {
+      "collider_mesh_url": "https://cdn.marble.worldlabs.ai/b9343ffa-0b73-433b-98db-b4c448d93224/99a45968.glb",
+      "hq_mesh_url": null,
+      "full_res_mesh_url": null
+    },
+    "imagery": {
+      "pano_url": "https://cdn.marble.worldlabs.ai/b9343ffa-0b73-433b-98db-b4c448d93224/b87445e5-a81c-4769-85c3-dde05486c3b3_panos/rgb_0.png"
+    },
+    "splats": {
+      "spz_urls": {
+        "500k": "https://cdn.marble.worldlabs.ai/b9343ffa-0b73-433b-98db-b4c448d93224/971926ca-5b06-45f2-85ad-05e6d04fe8f4_ceramic_500k.spz",
+        "100k": "https://cdn.marble.worldlabs.ai/b9343ffa-0b73-433b-98db-b4c448d93224/eb9303d6-8427-470f-8731-d6cdfd67e632_dust_100k.spz",
+        "150k": "https://cdn.marble.worldlabs.ai/b9343ffa-0b73-433b-98db-b4c448d93224/4ea30740-7f23-4ad1-90ed-a250f1002810_ceramic_150k.spz",
+        "full_res": "https://cdn.marble.worldlabs.ai/b9343ffa-0b73-433b-98db-b4c448d93224/33aa80e5-e68f-4854-a597-a9db2f10f9b7_ceramic.spz"
+      },
+      "semantics_metadata": {
+        "metric_scale_factor": 2.2089924812316895,
+        "ground_plane_offset": 1.3981349468231201
+      }
+    },
+    "thumbnail_url": "https://cdn.marble.worldlabs.ai/b9343ffa-0b73-433b-98db-b4c448d93224/2cb96fad-18db-4aa3-b08f-344fcfa14724_sand_mpi/thumbnail.webp",
+    "caption": "The scene is a luxurious, modern living room in the Pacific Northwest, rendered with photorealistic precision, exuding an atmosphere of sophisticated tranquility. The expansive space is characterized by an open-plan design, seamlessly integrating various functional areas. Floor-to-ceiling glass panels dominate one entire wall, offering an unobstructed, panoramic vista of Lake Union in Seattle, with the city skyline visible in the distance. Cedar wood slat accents are strategically incorporated into the interior architecture, providing warmth and a natural, organic texture that contrasts with the sleek glass and polished surfaces. Architectural lighting, including recessed fixtures and subtle uplighting, illuminates the room, highlighting its clean lines and contemporary furnishings. A large, comfortable sofa upholstered in a neutral tone anchors the main seating area, positioned to maximize the lake view. A minimalist coffee table, crafted from dark wood or metal, sits before the sofa. The flooring is a light-colored, wide-plank wood, extending throughout the open space. A fireplace, integrated into a stone or concrete wall, adds a focal point and a touch of coziness. The ceiling features exposed beams or a tray design, further emphasizing the architectural detail. The floor-to-ceiling glass wall is the dominant feature, facing directly towards Lake Union. The cedar wood slat accents are integrated into the walls and possibly the ceiling, running parallel to the glass. The sofa and coffee table are centrally placed within the living area, oriented towards the lake view. The fireplace is situated on an interior wall, perpendicular to the glass facade. "
+  },
+  "created_at": "2026-09-05T19:54:50Z",
+  "updated_at": "2026-09-05T20:10:10Z",
+  "permission": {
+    "public": false,
+    "allowed_readers": [],
+    "allowed_writers": [],
+    "allow_id_access": false
+  },
+  "world_prompt": {
+    "text_prompt": "The scene is a luxurious, modern living room in the Pacific Northwest, rendered with photorealistic precision, exuding an atmosphere of sophisticated tranquility. The expansive space is characterized by an open-plan design, seamlessly integrating various functional areas. Floor-to-ceiling glass panels dominate one entire wall, offering an unobstructed, panoramic vista of Lake Union in Seattle, with the city skyline visible in the distance. Cedar wood slat accents are strategically incorporated into the interior architecture, providing warmth and a natural, organic texture that contrasts with the sleek glass and polished surfaces. Architectural lighting, including recessed fixtures and subtle uplighting, illuminates the room, highlighting its clean lines and contemporary furnishings. A large, comfortable sofa upholstered in a neutral tone anchors the main seating area, positioned to maximize the lake view. A minimalist coffee table, crafted from dark wood or metal, sits before the sofa. The flooring is a light-colored, wide-plank wood, extending throughout the open space. A fireplace, integrated into a stone or concrete wall, adds a focal point and a touch of coziness. The ceiling features exposed beams or a tray design, further emphasizing the architectural detail. The floor-to-ceiling glass wall is the dominant feature, facing directly towards Lake Union. The cedar wood slat accents are integrated into the walls and possibly the ceiling, running parallel to the glass. The sofa and coffee table are centrally placed within the living area, oriented towards the lake view. The fireplace is situated on an interior wall, perpendicular to the glass facade. The 360 scene is faultless.",
+    "type": "text"
+  },
+  "world_marble_url": "https://marble.worldlabs.ai/world/b9343ffa-0b73-433b-98db-b4c448d93224",
+  "model": "marble-1.1"
+}

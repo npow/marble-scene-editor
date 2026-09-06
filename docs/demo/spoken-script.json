@@ -1,0 +1,23 @@
+{
+  "project": "Marble Studio",
+  "event": null,
+  "track": null,
+  "duration": 120,
+  "voice": "af_heart",
+  "voiceDescription": "Generic synthetic American English narration from Kokoro; no voice cloning.",
+  "model": "hexgrad/Kokoro-82M",
+  "revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+  "modelSource": "https://huggingface.co/hexgrad/Kokoro-82M",
+  "targetWordsPerMinute": 160,
+  "sections": [
+    { "id": "opening", "start": 0, "end": 8, "text": "Generated rooms look real, but their objects are locked together. Marble Studio turns a scene into editable pieces." },
+    { "id": "editing", "start": 8, "end": 25, "text": "Import a world and draw a box around an object. Refine the selection, give it a name, and move it with the transform controls. The selected geometry becomes a separate object you can rotate, scale, or delete." },
+    { "id": "montage", "start": 25, "end": 45, "text": "These sixteen recorded edits cover eight objects in four scenes, from sofas and tables to a kitchen island. Each pair shows a move and a second transform. The same editing controls work across the different rooms." },
+    { "id": "saving", "start": 45, "end": 55, "text": "Undo restores deleted objects. Projects save your selections and transforms. Reopen them with the original scene, or recover edits through browser autosave." },
+    { "id": "method", "start": 55, "end": 65, "text": "Sam two finds the object's outline. We map it to the scene's splats, then check distance behind the object to reduce stray background." },
+    { "id": "floor", "start": 65, "end": 75, "text": "Moving an object can reveal missing floor. A flat patch reuses nearby floor appearance. This approximate repair still shows tiling and residual artifacts." },
+    { "id": "challenges", "start": 75, "end": 95, "text": "Three challenges remain. Background can be selected by mistake, so we check distance behind the object. Missing floor needs an approximate repair. Hidden sides may need selection from another angle, when that geometry exists. The editor cannot recover surfaces that were never captured." },
+    { "id": "technology", "start": 95, "end": 115, "text": "World Labs Marble provides scene assets and world imports. Meta's Sam two finds object outlines. Spark and Three jay ess render the splats and provide transform controls. An NVIDIA R T X six thousand G P U runs segmentation. Together, they connect generated worlds to direct object editing." },
+    { "id": "close", "start": 115, "end": 120, "text": "Marble Studio. Make the room your own." }
+  ]
+}

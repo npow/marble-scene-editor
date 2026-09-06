@@ -1,0 +1,43 @@
+{
+  "world_id": "ae3e7663-c699-4cc1-b273-df823e165140",
+  "display_name": "SF_Jackson_Penthouse_Loft",
+  "tags": null,
+  "assets": {
+    "mesh": {
+      "collider_mesh_url": "https://cdn.marble.worldlabs.ai/ae3e7663-c699-4cc1-b273-df823e165140/ae3e6e63.glb",
+      "hq_mesh_url": null,
+      "full_res_mesh_url": null
+    },
+    "imagery": {
+      "pano_url": "https://cdn.marble.worldlabs.ai/ae3e7663-c699-4cc1-b273-df823e165140/a9313ee6-b85d-48ae-8a6a-f8a225732d34_panos/rgb_0.png"
+    },
+    "splats": {
+      "spz_urls": {
+        "500k": "https://cdn.marble.worldlabs.ai/ae3e7663-c699-4cc1-b273-df823e165140/0e751eea-0b2c-4c7a-8cb3-7259d2066024_ceramic_500k.spz",
+        "100k": "https://cdn.marble.worldlabs.ai/ae3e7663-c699-4cc1-b273-df823e165140/e0de0115-26c3-4c40-a1af-a50da28de86a_dust_100k.spz",
+        "150k": "https://cdn.marble.worldlabs.ai/ae3e7663-c699-4cc1-b273-df823e165140/86be1ce5-52a4-4ce9-aa5e-ae9ec5fb6936_ceramic_150k.spz",
+        "full_res": "https://cdn.marble.worldlabs.ai/ae3e7663-c699-4cc1-b273-df823e165140/88d4306c-c973-4247-b4b6-4b37513f2739_ceramic.spz"
+      },
+      "semantics_metadata": {
+        "metric_scale_factor": 2.645695209503174,
+        "ground_plane_offset": 1.5135083198547363
+      }
+    },
+    "thumbnail_url": "https://cdn.marble.worldlabs.ai/ae3e7663-c699-4cc1-b273-df823e165140/ad354985-226f-4786-82db-f5c2aa3839a9_sand_mpi/thumbnail.webp",
+    "caption": "The scene is a photorealistic interior of an architectural penthouse loft living room, exuding a sophisticated and expansive atmosphere. The overall tone is luxurious and modern, emphasizing natural light and open space. The living room features impressive 11-foot timber ceilings, showcasing exposed wooden beams that add warmth and architectural character. Wide plank hardwood floors, laid in a rich, dark stain, stretch across the entire open-concept layout, reflecting the abundant natural light. Floor-to-ceiling glass windows dominate one entire wall, offering panoramic views of the cityscape and allowing sunlight to flood the space. A plush, oversized sectional sofa in a neutral tone is positioned centrally, facing the expansive windows, inviting relaxation. A sleek, low-profile coffee table crafted from dark wood and metal sits in front of the sofa. A contemporary fireplace, integrated seamlessly into a stone-clad wall, provides a focal point on an adjacent wall. Built-in shelving units, also in dark wood, flank the fireplace, displaying curated art pieces and books. A large, abstract painting with muted colors hangs above the sofa, complementing the room's aesthetic. The open-concept design seamlessly connects the living area to a dining space, visible beyond the sofa, maintaining an uninterrupted flow. The timber ceilings extend uniformly across the entire space, creating a cohesive architectural statement. The wide plank hardwood floors provide a continuous surface throughout the living and dining areas. The floor-to-ceiling glass windows form the primary boundary of the room, offering an unobstructed vista. The sectional sofa is positioned with its back to the dining area, facing the windows. The coffee table is directly in front of the sofa. The fireplace is set into the wall perpendicular to the windows, with the built-in shelves on either side. "
+  },
+  "created_at": "2026-09-05T19:54:41Z",
+  "updated_at": "2026-09-05T20:07:32Z",
+  "permission": {
+    "public": false,
+    "allowed_readers": [],
+    "allowed_writers": [],
+    "allow_id_access": false
+  },
+  "world_prompt": {
+    "text_prompt": "The scene is a photorealistic interior of an architectural penthouse loft living room, exuding a sophisticated and expansive atmosphere. The overall tone is luxurious and modern, emphasizing natural light and open space. The living room features impressive 11-foot timber ceilings, showcasing exposed wooden beams that add warmth and architectural character. Wide plank hardwood floors, laid in a rich, dark stain, stretch across the entire open-concept layout, reflecting the abundant natural light. Floor-to-ceiling glass windows dominate one entire wall, offering panoramic views of the cityscape and allowing sunlight to flood the space. A plush, oversized sectional sofa in a neutral tone is positioned centrally, facing the expansive windows, inviting relaxation. A sleek, low-profile coffee table crafted from dark wood and metal sits in front of the sofa. A contemporary fireplace, integrated seamlessly into a stone-clad wall, provides a focal point on an adjacent wall. Built-in shelving units, also in dark wood, flank the fireplace, displaying curated art pieces and books. A large, abstract painting with muted colors hangs above the sofa, complementing the room's aesthetic. The open-concept design seamlessly connects the living area to a dining space, visible beyond the sofa, maintaining an uninterrupted flow. The timber ceilings extend uniformly across the entire space, creating a cohesive architectural statement. The wide plank hardwood floors provide a continuous surface throughout the living and dining areas. The floor-to-ceiling glass windows form the primary boundary of the room, offering an unobstructed vista. The sectional sofa is positioned with its back to the dining area, facing the windows. The coffee table is directly in front of the sofa. The fireplace is set into the wall perpendicular to the windows, with the built-in shelves on either side. The 360 scene is faultless.",
+    "type": "text"
+  },
+  "world_marble_url": "https://marble.worldlabs.ai/world/ae3e7663-c699-4cc1-b273-df823e165140",
+  "model": "marble-1.1"
+}

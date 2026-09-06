@@ -1,0 +1,43 @@
+{
+  "world_id": "84de7e60-3434-4a8e-9846-600fe776aa4b",
+  "display_name": "house_1_california",
+  "tags": null,
+  "assets": {
+    "mesh": {
+      "collider_mesh_url": "https://cdn.marble.worldlabs.ai/84de7e60-3434-4a8e-9846-600fe776aa4b/abadfafa.glb",
+      "hq_mesh_url": null,
+      "full_res_mesh_url": null
+    },
+    "imagery": {
+      "pano_url": "https://cdn.marble.worldlabs.ai/84de7e60-3434-4a8e-9846-600fe776aa4b/36638f06-b7d4-40e7-a61f-d398a374b8ee_panos/rgb_0.png"
+    },
+    "splats": {
+      "spz_urls": {
+        "500k": "https://cdn.marble.worldlabs.ai/84de7e60-3434-4a8e-9846-600fe776aa4b/ab3d480d-48a8-4b8b-80bd-4df330af4eae_ceramic_500k.spz",
+        "100k": "https://cdn.marble.worldlabs.ai/84de7e60-3434-4a8e-9846-600fe776aa4b/97cac0bc-7258-4e4c-9192-b94ed69e65af_dust_100k.spz",
+        "150k": "https://cdn.marble.worldlabs.ai/84de7e60-3434-4a8e-9846-600fe776aa4b/90ecec8f-24ed-4442-a4bf-5cc5d16f3aa6_ceramic_150k.spz",
+        "full_res": "https://cdn.marble.worldlabs.ai/84de7e60-3434-4a8e-9846-600fe776aa4b/a8ef802e-c3ee-4df8-8e3c-cbb533ad5f5d_ceramic.spz"
+      },
+      "semantics_metadata": {
+        "metric_scale_factor": 2.344020366668701,
+        "ground_plane_offset": 1.4958913326263428
+      }
+    },
+    "thumbnail_url": "https://cdn.marble.worldlabs.ai/84de7e60-3434-4a8e-9846-600fe776aa4b/d01d602f-cc95-432d-9ee5-4f46f29529b2_sand_mpi/thumbnail.webp",
+    "caption": "The scene is a spacious, open-concept California luxury home interior, rendered in a photorealistic style, exuding an atmosphere of modern elegance and comfort. The overall tone is bright and inviting, characterized by clean lines and high-end finishes. The expansive living area features gleaming hardwood floors that extend throughout the space, reflecting the abundant natural light. Soaring high ceilings enhance the sense of grandeur and openness. A large kitchen island, topped with pristine white marble counters, anchors the kitchen area, providing ample space for food preparation and casual dining. Floor-to-ceiling windows line the exterior walls, offering panoramic views of the surrounding landscape and flooding the interior with sunlight. The design seamlessly integrates the living, dining, and kitchen areas, fostering a fluid and interconnected environment. Recessed lighting is strategically placed across the ceilings, ensuring even illumination during evening hours. The walls are painted in a neutral, light color, providing a sophisticated backdrop for the contemporary furnishings. The kitchen island is centrally located within the open-concept space, with the living and dining areas flowing around it. The floor-to-ceiling windows are positioned along the perimeter walls, allowing for maximum light penetration. The hardwood floors stretch continuously from one end of the home to the other, unifying the various zones. "
+  },
+  "created_at": "2026-09-05T19:57:41Z",
+  "updated_at": "2026-09-05T20:13:28Z",
+  "permission": {
+    "public": false,
+    "allowed_readers": [],
+    "allowed_writers": [],
+    "allow_id_access": false
+  },
+  "world_prompt": {
+    "text_prompt": "The scene is a spacious, open-concept California luxury home interior, rendered in a photorealistic style, exuding an atmosphere of modern elegance and comfort. The overall tone is bright and inviting, characterized by clean lines and high-end finishes. The expansive living area features gleaming hardwood floors that extend throughout the space, reflecting the abundant natural light. Soaring high ceilings enhance the sense of grandeur and openness. A large kitchen island, topped with pristine white marble counters, anchors the kitchen area, providing ample space for food preparation and casual dining. Floor-to-ceiling windows line the exterior walls, offering panoramic views of the surrounding landscape and flooding the interior with sunlight. The design seamlessly integrates the living, dining, and kitchen areas, fostering a fluid and interconnected environment. Recessed lighting is strategically placed across the ceilings, ensuring even illumination during evening hours. The walls are painted in a neutral, light color, providing a sophisticated backdrop for the contemporary furnishings. The kitchen island is centrally located within the open-concept space, with the living and dining areas flowing around it. The floor-to-ceiling windows are positioned along the perimeter walls, allowing for maximum light penetration. The hardwood floors stretch continuously from one end of the home to the other, unifying the various zones. The 360 scene is faultless.",
+    "type": "text"
+  },
+  "world_marble_url": "https://marble.worldlabs.ai/world/84de7e60-3434-4a8e-9846-600fe776aa4b",
+  "model": "marble-1.1"
+}

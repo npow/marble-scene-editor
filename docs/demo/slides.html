@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920, initial-scale=1">
+  <title>Marble Studio — video cards</title>
+  <style>
+    :root { --bg:#171d22; --mint:#a4efd9; --white:#f0f5f3; --muted:#a1b2b9; --line:#35434a; }
+    * { box-sizing:border-box; }
+    html,body { margin:0; width:1920px; height:1080px; overflow:hidden; }
+    body { background:var(--bg); color:var(--white); font-family:Arial,Helvetica,sans-serif; -webkit-font-smoothing:antialiased; }
+    .slide { width:1920px; height:1080px; position:relative; padding:80px 108px 72px; overflow:hidden; background:radial-gradient(ellipse at 95% 90%,#28443c66 0,transparent 50%),var(--bg); }
+    .slide:before { content:'';position:absolute;inset:0;pointer-events:none;opacity:.16;background-image:linear-gradient(#71857e21 1px,transparent 1px),linear-gradient(90deg,#71857e21 1px,transparent 1px);background-size:80px 80px;mask-image:linear-gradient(90deg,transparent,#000); }
+    header { height:64px; display:flex;align-items:center;justify-content:space-between;position:relative;z-index:1; }
+    .brand { display:flex; align-items:center; gap:17px; font-size:28px; font-weight:600; letter-spacing:-.8px; }
+    .brand svg { width:48px;height:48px; }
+    .focus { color:var(--muted);font-size:21px;letter-spacing:2.6px;text-transform:uppercase; }
+    .eyebrow { font-size:22px;letter-spacing:3.8px;text-transform:uppercase;color:var(--mint);font-weight:600; }
+    main { margin-top:89px;position:relative;z-index:1; }
+    h1 { font-size:80px;line-height:1.08;letter-spacing:-3.5px;font-weight:500;margin:24px 0 0; }
+    .footer { position:absolute;bottom:69px;left:108px;right:108px;border-top:1px solid var(--line);padding-top:25px;display:flex;align-items:center;justify-content:space-between;color:var(--muted);font-size:21px;z-index:1; }
+    .footer .number { color:var(--mint);font-family:monospace;font-size:21px;letter-spacing:2px; }
+    .title main { margin-top:169px; }
+    .title h1 { font-size:136px;letter-spacing:-6px;margin-top:30px; }
+    .title .subtitle { color:var(--muted);font-size:52px;line-height:1.24;margin-top:27px;letter-spacing:-1.7px;white-space:pre-line; }
+    .title .art { position:absolute;right:73px;top:242px;width:680px;height:560px;opacity:.94; }
+    .title main { max-width:1100px; }
+    .title .closing-line { color:var(--mint); }
+    .pipeline { display:grid;grid-template-columns:1fr 80px 1fr 80px 1fr;align-items:center;margin-top:76px; }
+    .method-card { height:334px;border:1px solid #41544d;border-radius:18px;background:linear-gradient(140deg,#293c3480,#1b252a80);padding:29px 35px;position:relative; }
+    .method-card .visual {height:149px;display:flex;justify-content:center;align-items:center; }
+    .method-card svg {width:220px;height:139px; }
+    .method-card h2 {font-size:37px;letter-spacing:-1px;font-weight:500;margin:22px 0 12px; }
+    .method-card p {font-size:24px;margin:0;color:var(--muted); }
+    .arrow { color:var(--mint);font-size:42px;text-align:center; }
+    .floor-layout {display:grid;grid-template-columns:850px 1fr;gap:80px;margin-top:61px;align-items:center; }
+    .floor-diagram {height:408px;border:1px solid #41544d;border-radius:18px;background:#1a252aaa; }
+    .floor-steps {display:flex;flex-direction:column;gap:35px; }
+    .floor-step {display:flex;align-items:center;gap:24px;font-size:32px;letter-spacing:-.7px; }
+    .step-index {width:44px;height:44px;border-radius:50%;border:1px solid #6aa18d;display:flex;align-items:center;justify-content:center;color:var(--mint);font-size:20px;flex-shrink:0; }
+    .note {font-size:24px;color:var(--muted);margin-top:39px; }
+    .challenges h1 {font-size:76px; }
+    .challenge-rows {margin-top:64px;border-top:1px solid var(--line); }
+    .challenge-row {display:grid;grid-template-columns:64px 650px 92px 1fr;align-items:center;min-height:125px;border-bottom:1px solid var(--line);font-size:37px;letter-spacing:-.7px; }
+    .challenge-row .index {font:22px monospace;color:#6f8c81; }
+    .challenge-row .response {color:var(--mint); }
+    .challenge-row .arrow {text-align:left; }
+    .tech-grid {display:grid;grid-template-columns:1fr 1fr;gap:25px;margin-top:65px; }
+    .tech-card {height:205px;border:1px solid var(--line);border-radius:15px;background:#202b2fbd;padding:28px 35px;position:relative; }
+    .tech-card .tag {font:17px monospace;letter-spacing:2px;color:var(--mint); }
+    .tech-card h2 {font-size:37px;letter-spacing:-1px;margin:18px 0 12px;font-weight:500; }
+    .tech-card p {color:var(--muted);font-size:24px;margin:0; }
+    .tech-card .tiny-icon {position:absolute;right:33px;top:27px;color:#638679;font-size:28px; }
+    .close main {margin-top:174px; }
+    .close .subtitle {color:var(--mint);font-size:58px; }
+    body.overlay {background:transparent; }
+    body.overlay .slide {background:transparent;padding:0; }
+    body.overlay .slide:before {display:none; }
+    .overlay-panel {position:absolute;left:64px;bottom:64px;padding:30px 41px 34px;border-left:4px solid var(--mint);border-radius:0 14px 14px 0;min-width:860px;background:linear-gradient(90deg,#131c21f5,#131c21e8);box-shadow:0 6px 40px #0005; }
+    .overlay-panel .eyebrow {font-size:18px;letter-spacing:3px; }
+    .overlay-panel h1 {font-size:64px;line-height:1.04;margin-top:15px;letter-spacing:-2.4px;white-space:pre-line; }
+    .overlay-panel .subtitle {font-size:26px;color:#bdcdc9;margin-top:15px; }
+    .problem-overlay .overlay-panel h1 {font-size:49px;line-height:1.1; }
+  </style>
+</head>
+<body><div id="root"></div>
+<script type="module">
+  const copy = window.__VIDEO_COPY__ || await fetch('./video-copy.json').then(r=>r.json());
+  const id = new URLSearchParams(location.search).get('slide') || 'title';
+  const content = [...copy.slides,...copy.overlays].find(s=>s.id===id);
+  if (!content) throw new Error('Unknown slide: '+id);
+  const esc = s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const logo = `<svg viewBox="0 0 48 48" fill="none"><rect x="1" y="1" width="46" height="46" rx="12" fill="#294339" stroke="#527967"/><path d="m11 19 13-7 13 7-13 7-13-7Z" stroke="#a4efd9" stroke-width="1.8" stroke-linejoin="round"/><path d="m11 25 13 7 13-7M11 31l13 7 13-7" stroke="#a4efd9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+  const cube = `<svg viewBox="0 0 640 540" fill="none"><defs><linearGradient id="cube-face" x1="200" y1="180" x2="430" y2="490" gradientUnits="userSpaceOnUse"><stop stop-color="#3c6f5c" stop-opacity=".7"/><stop offset="1" stop-color="#253b33" stop-opacity=".2"/></linearGradient></defs><path d="m53 376 263-151 263 151-263 151L53 376Z" stroke="#547a69" stroke-opacity=".5"/><path d="m113 344 203-117 203 117M174 310l142-82 142 82M234 275l82-47 82 47M114 411l262-151M174 447l262-151M235 482l263-151" stroke="#466659" stroke-opacity=".45"/><path d="m191 193 125-72 125 72-125 72-125-72Z" fill="#59866f" fill-opacity=".25" stroke="#a4efd9" stroke-width="2"/><path d="M191 193v176l125 72 125-72V193l-125 72-125-72Z" fill="url(#cube-face)" stroke="#a4efd9" stroke-width="2"/><path d="M316 265v176M191 369l125-72 125 72M316 121v176" stroke="#a4efd9" stroke-opacity=".28" stroke-width="2" stroke-dasharray="7 7"/><path d="M316 357V75m0 0-11 16m11-16 11 16M316 357l188 109m0 0-6-18m6 18-19 3M316 357 137 460m0 0 20 1m-20-1 7-18" stroke="#a4efd9" stroke-width="3"/><circle cx="316" cy="357" r="7" fill="#a4efd9"/><circle cx="504" cy="466" r="4" fill="#a4efd9"/><circle cx="137" cy="460" r="4" fill="#a4efd9"/></svg>`;
+  const seat = `<path d="M57 80V56q0-9 10-9h84q10 0 10 9v24M49 75q0-8 8-8h9v25h86V67h9q8 0 8 8v31H49V75Zm9 31v12m103-12v12" fill="#37564a" stroke="#86b7a2" stroke-width="2.5" stroke-linejoin="round"/>`;
+  const visuals = [
+    `<svg viewBox="0 0 220 140" fill="none"><rect x="13" y="14" width="194" height="114" rx="7" stroke="#4a6359"/><path d="M14 104h192" stroke="#314a3f"/>${seat}<path d="M38 52V36h22m97 0h25v19m0 46v20h-24m-98 0H38v-17" stroke="#a4efd9" stroke-width="3"/></svg>`,
+    `<svg viewBox="0 0 220 140" fill="none"><rect x="13" y="14" width="194" height="114" rx="7" stroke="#4a6359"/>${seat}<path d="M57 80V56q0-9 10-9h84q10 0 10 9v11q8 0 8 8v31H49V75q0-8 8-8Z" fill="#a4efd9" fill-opacity=".45" stroke="#a4efd9" stroke-width="2"/></svg>`,
+    `<svg viewBox="0 0 220 140" fill="none"><path d="m33 94 76-45 80 45-80 45-76-45Z" stroke="#466858"/>${Array.from({length:54},(_,i)=>{const col=i%9,row=Math.floor(i/9);return `<circle cx="${62+col*11+row*1.6}" cy="${35+row*12+Math.sin(col)*4}" r="${2+i%3*.35}" fill="#a4efd9" opacity="${.55+(i%4)*.1}"/>`;}).join('')}<path d="M110 90V12m0 0-5 8m5-8 5 8M110 90l77 42m0 0-4-10m4 10-11-1M110 90l-69 40m0 0 10 0m-10 0 5-9" stroke="#a4efd9" stroke-width="2"/></svg>`
+  ];
+  const floorArt = `<svg class="floor-diagram" viewBox="0 0 850 408" fill="none"><defs><pattern id="floor-tile" x="0" y="0" width="63" height="40" patternUnits="userSpaceOnUse" patternTransform="rotate(-29)"><rect width="63" height="40" fill="#566b61"/><path d="M0 0h63v40H0Z" stroke="#799184"/><path d="M0 10h63M0 30h63" stroke="#647c6d" stroke-opacity=".65"/></pattern></defs><path d="m88 239 325-169 330 167-324 166L88 239Z" fill="#21342c" stroke="#587865"/><path d="m179 194 146-75 128 65-146 75-128-65Z" fill="url(#floor-tile)" stroke="#a4efd9" stroke-width="2"/><path d="m407 261 150-79 125 66-150 76-125-63Z" fill="url(#floor-tile)" stroke="#a4efd9" stroke-width="2" stroke-dasharray="8 5"/><path d="m340 180 152 77m0 0-22 0m22 0-13-19" stroke="#a4efd9" stroke-width="3"/><path d="m469 114 86-44 94 47-89 47-91-50Z" stroke="#658f7b" stroke-width="2"/><path d="M469 114v61l91 47 89-44v-61M560 164v58" stroke="#658f7b" stroke-width="2"/><path d="m411 275 118 58" stroke="#a4efd9" stroke-width="3"/><text x="126" y="325" fill="#bed4ca" font-size="22" font-family="Arial">Observed floor</text><text x="529" y="364" fill="#a4efd9" font-size="22" font-family="Arial">Repaired area</text></svg>`;
+  const root = document.getElementById('root');
+  if(id.endsWith('overlay')) {
+    document.body.className='overlay';
+    root.innerHTML=`<section class="slide ${esc(id)}"><div class="overlay-panel"><div class="eyebrow">${esc(content.eyebrow)}</div><h1>${esc(content.title)}</h1><div class="subtitle">${esc(content.subtitle)}</div></div></section>`;
+  } else {
+    let body='';
+    if(id==='title'||id==='close') body=`<div class="subtitle">${esc(content.subtitle)}</div>`;
+    if(id==='method') body=`<div class="pipeline">${content.steps.map((step,i)=>`${i?'<div class="arrow">→</div>':''}<div class="method-card"><div class="visual">${visuals[i]}</div><h2>${esc(step.label)}</h2><p>${esc(step.detail)}</p></div>`).join('')}</div>`;
+    if(id==='floor') body=`<div class="floor-layout">${floorArt}<div class="floor-steps">${content.steps.map((step,i)=>`<div class="floor-step"><span class="step-index">${i+1}</span>${esc(step)}</div>`).join('')}</div></div>`;
+    if(id==='challenges') body=`<div class="challenge-rows">${content.rows.map((row,i)=>`<div class="challenge-row"><span class="index">0${i+1}</span><span>${esc(row.problem)}</span><span class="arrow">→</span><span class="response">${esc(row.response)}</span></div>`).join('')}</div>`;
+    if(id==='technology') body=`<div class="tech-grid">${content.items.map((item,i)=>`<div class="tech-card"><div class="tag">${esc(item.tag)}</div><span class="tiny-icon">${['◇','⊞','⌘','▦'][i]}</span><h2>${esc(item.name)}</h2><p>${esc(item.role)}</p></div>`).join('')}</div>`;
+    const footer=content.footer||content.note||(id==='technology'?'A generated world → direct object editing':(copy.track?`Track · ${copy.track}`:'Scene editor'));
+    root.innerHTML=`<section class="slide ${esc(id)} ${(id==='title'||id==='close')?'title':''}"><header><div class="brand">${logo}<span>${esc(copy.project)}</span></div><div class="focus">${esc(copy.event||copy.focus)}</div></header><main><div class="eyebrow">${esc(content.eyebrow)}</div><h1>${esc(content.title)}</h1>${body}</main>${(id==='title'||id==='close')?`<div class="art">${cube}</div>`:''}<div class="footer"><span>${esc(footer)}</span><span class="number">${id==='close'?'END':(id==='title'?'DEMO':`0${copy.slides.findIndex(s=>s.id===id)}`)}</span></div></section>`;
+  }
+  window.__SLIDE_READY__=true;
+</script>
+</body>
+</html>

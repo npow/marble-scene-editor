@@ -1,0 +1,10 @@
+[
+  {"id":"seattle-sofa","scene":"seattle_modern","name":"Sofa","box":[492,495,914,824],"move":0.8,"action":"rotate","amount":25},
+  {"id":"seattle-table","scene":"seattle_modern","name":"Coffee table","box":[875,573,1090,794],"move":0.7,"action":"rotate","amount":40},
+  {"id":"seattle-chair","scene":"seattle_modern","name":"Armchair","box":[806,475,902,560],"move":0.6,"action":"rotate","amount":45},
+  {"id":"sf-ottoman","scene":"sf_penthouse_loft","name":"Ottoman","box":[594,604,871,780],"move":0.7,"action":"scale","amount":1.2},
+  {"id":"sf-table","scene":"sf_penthouse_loft","name":"Long table","box":[850,580,1080,756],"move":0.65,"action":"rotate","amount":35},
+  {"id":"sf-sectional","scene":"sf_penthouse_loft","name":"Sectional","box":[246,503,955,910],"move":0.45,"action":"rotate","amount":12},
+  {"id":"house1-console","scene":"house_1","name":"Console table","target":[-2,1,4],"box":[642,492,910,568],"move":0.8,"action":"scale","amount":1.2},
+  {"id":"house2-island","scene":"house_2","name":"Kitchen island","target":[-2,1,4],"box":[514,505,886,655],"move":0.75,"action":"rotate","amount":25}
+]

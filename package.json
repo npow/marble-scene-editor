@@ -1,0 +1,49 @@
+{
+  "name": "marble-scene-editor",
+  "version": "1.0.0",
+  "description": "Segment and rearrange objects in World Labs Marble scenes with AI selection, 3D transforms, and approximate floor repair.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "test": "node --import tsx --test tests/*.test.ts",
+    "test:editor": "node scripts/test_scene_editor.mjs",
+    "segmentation:serve": "python3 scripts/segmentation_server.py",
+    "demo:record": "node scripts/record_scene_editor.mjs",
+    "demo:slides": "node scripts/render_scene_slides.mjs",
+    "demo:assemble": "python3 scripts/assemble_scene_video.py"
+  },
+  "dependencies": {
+    "@sparkjsdev/spark": "^2.1.0",
+    "lucide-react": "^0.475.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "three": "^0.185.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
+    "playwright": "^1.63.0",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^3.4.17",
+    "tsx": "^4.23.13",
+    "typescript": "^5.7.3",
+    "vite": "^6.2.0",
+    "@types/three": "^0.185.4"
+  },
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/npow/marble-scene-editor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/npow/marble-scene-editor/issues"
+  },
+  "homepage": "https://github.com/npow/marble-scene-editor#readme",
+  "engines": {
+    "node": ">=20"
+  }
+}

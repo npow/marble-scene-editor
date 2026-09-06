@@ -1,0 +1,32 @@
+{
+  "project": "Marble Studio",
+  "focus": "Spatial editing",
+  "event": null,
+  "track": null,
+  "metadataNote": "Spatial editing is the project focus, not an official event or track name. Set event and track only after the exact names are confirmed.",
+  "theme": { "width": 1920, "height": 1080, "background": "#171d22", "accent": "#a4efd9", "foreground": "#f0f5f3", "muted": "#a1b2b9" },
+  "assetDirectory": "artifacts/scene-editor/video/slides",
+  "slides": [
+    { "id": "title", "file": "00-title.png", "start": 0, "end": 4, "optional": true, "eyebrow": "Spatial editing", "title": "Marble Studio", "subtitle": "From generated rooms\nto editable objects." },
+    { "id": "method", "file": "01-method.png", "start": 55, "end": 65, "eyebrow": "How it works · 01", "title": "Turn a mask into an object.", "steps": [ { "label": "Box prompt", "detail": "In the current view" }, { "label": "SAM 2 mask", "detail": "Find the screen boundary" }, { "label": "3D splat group", "detail": "Project + check local depth" } ], "footer": "Import → Select / refine → Move / rotate / scale / delete → Undo / save" },
+    { "id": "floor", "file": "02-floor.png", "start": 65, "end": 75, "eyebrow": "How it works · 02", "title": "Fill the floor left behind.", "steps": [ "Sample nearby floor", "Rebuild a flat surface", "Keep the patch in place" ], "note": "Approximate repair · tiling and residual artifacts remain" },
+    { "id": "challenges", "file": "03-challenges.png", "start": 75, "end": 95, "eyebrow": "Challenges & current limits", "title": "Editing exposes what’s missing.", "rows": [ { "problem": "Accidentally selecting the background", "response": "Check distance behind the object" }, { "problem": "Missing floor", "response": "Approximate floor repair" }, { "problem": "Hidden sides of an object", "response": "Select from another angle" } ], "note": "Selection and reconstruction still need refinement." },
+    { "id": "technology", "file": "04-technology.png", "start": 95, "end": 115, "eyebrow": "Technology", "title": "The tools behind the edit.", "items": [ { "name": "World Labs Marble", "role": "World assets + API import", "tag": "WORLD" }, { "name": "Meta SAM 2", "role": "Local screen masks", "tag": "SELECTION" }, { "name": "Spark + Three.js", "role": "Splat rendering + transform gizmos", "tag": "EDITOR" }, { "name": "NVIDIA RTX 6000", "role": "Runs SAM 2 inference", "tag": "COMPUTE" } ] },
+    { "id": "close", "file": "05-close.png", "start": 115, "end": 120, "eyebrow": "Spatial editing", "title": "Marble Studio", "subtitle": "Make the room your own." }
+  ],
+  "overlays": [
+    { "id": "title-overlay", "file": "00-title-overlay.png", "start": 0, "end": 4, "eyebrow": "Spatial editing", "title": "Marble Studio", "subtitle": "From generated rooms to editable objects." },
+    { "id": "problem-overlay", "file": "00-problem-overlay.png", "start": 4, "end": 8, "eyebrow": "The problem", "title": "Real-looking rooms.\nObjects locked together.", "subtitle": "Select an object. Change the scene." }
+  ],
+  "narration": [
+    { "start": 0, "end": 8, "text": "Generated rooms look real, but their objects aren’t independently editable. Marble Studio lets you select an object and change the scene." },
+    { "start": 8, "end": 25, "text": "Import a world, frame the object, and draw a box. Refine the selection, name the object, and move it with the transform gizmo. The object becomes a separate group you can rotate, scale, or delete." },
+    { "start": 25, "end": 45, "text": "Here are sixteen recorded edits across eight objects in four scenes: furniture, tables, and a kitchen island. Each pair shows a move and a second transform. The same editing loop carries across the different rooms." },
+    { "start": 45, "end": 55, "text": "Undo brings the object back. Save the project to keep the source scene and its edits together, ready to reopen." },
+    { "start": 55, "end": 65, "text": "SAM 2 masks the current view. Projecting that mask onto splats, with local depth checks, forms an editable object." },
+    { "start": 65, "end": 75, "text": "Moving an object can reveal missing floor. A flat patch reuses nearby rendered floor, with visible tiling and residual artifacts." },
+    { "start": 75, "end": 95, "text": "A selection can accidentally include the background, so we check distance behind the object. Moving furniture can expose missing floor, which we approximate. A view can also hide parts of an object. Selecting from another angle can include more existing geometry, but does not reconstruct missing surfaces." },
+    { "start": 95, "end": 115, "text": "World Labs Marble provides the world assets and API import. Meta SAM 2 creates local screen masks. Spark and Three.js render the splats and provide the transform gizmos. An NVIDIA RTX 6000 GPU runs SAM 2 inference. Together, they connect a generated world to direct object editing." },
+    { "start": 115, "end": 120, "text": "Marble Studio. Make the room your own." }
+  ]
+}

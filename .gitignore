@@ -1,0 +1,41 @@
+# Environment & Secrets
+.env
+.env.*
+*.key
+*.token
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+
+# Large 3D Assets & Cache
+*.ply
+*.glb
+*.gltf
+*.usd
+*.usda
+*.usdc
+*.spz
+/data/
+assets/downloads/
+
+# ...but DO ship the generated assets the deployed demo loads at runtime.
+# Without these exceptions the app builds locally and 404s in production.
+!public/assets/**/*.glb
+!public/assets/**/*.gltf
+!public/assets/**/*.spz
+
+# Node / Web UI
+node_modules/
+dist/
+.next/
+out/
+artifacts/scene-editor/
+
+# OS / IDE
+.DS_Store
+.vscode/
+.idea/

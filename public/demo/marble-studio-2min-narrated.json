@@ -1,0 +1,65 @@
+{
+  "output": "public/demo/marble-studio-2min-narrated.mp4",
+  "duration": 120.0,
+  "width": 1920,
+  "height": 1080,
+  "codec": "h264",
+  "bytes": 4279891,
+  "fps": 25,
+  "captured_objects": 8,
+  "montage_tiles": 16,
+  "partial": false,
+  "missing": [],
+  "track_label": "Spatial editing",
+  "hero": "seattle-sofa",
+  "slides": [
+    "artifacts/scene-editor/video/slides/01-method.png",
+    "artifacts/scene-editor/video/slides/02-floor.png",
+    "artifacts/scene-editor/video/slides/03-challenges.png",
+    "artifacts/scene-editor/video/slides/04-technology.png",
+    "artifacts/scene-editor/video/slides/05-close.png"
+  ],
+  "has_audio": true,
+  "timeline": [
+    {
+      "start": 0,
+      "end": 8,
+      "content": "problem over working app"
+    },
+    {
+      "start": 8,
+      "end": 25,
+      "content": "selection and transform loop"
+    },
+    {
+      "start": 25,
+      "end": 45,
+      "content": "4x4 actual capture montage"
+    },
+    {
+      "start": 45,
+      "end": 55,
+      "content": "delete, undo, save"
+    },
+    {
+      "start": 55,
+      "end": 75,
+      "content": "method and floor repair"
+    },
+    {
+      "start": 75,
+      "end": 95,
+      "content": "challenges"
+    },
+    {
+      "start": 95,
+      "end": 115,
+      "content": "technology roles"
+    },
+    {
+      "start": 115,
+      "end": 120,
+      "content": "close"
+    }
+  ]
+}
